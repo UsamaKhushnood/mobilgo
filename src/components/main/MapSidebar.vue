@@ -1,91 +1,144 @@
 <template >
   <div class="map-sidebar">
     <div class="bg-white mapLinks self-scroll">
-      <div
-        class="
-          widget-header
-          bg-green
-          d-flex
-          justify-content-between
-          c-white
-          align-items-center
-          px-4
-        "
-      >
-        <h4 class="text-center">Ride Booking</h4>
-        <b-form-select
-          class="select-ride-type"
-          v-model="selectedRideType"
-          :options="['Imidiate Pickup', 'Schedule Pickup']"
-          @change="onOptionChanged"
+      <div class="position-relative" style="height: calc(100vh - 140px)">
+        <div
+          class="
+            widget-header
+            bg-green
+            d-flex
+            justify-content-between
+            c-white
+            align-items-center
+            px-4
+          "
         >
-          ></b-form-select
-        >
-      </div>
-      <SelectScheduleModal />
-      <div class="p-4 bg-white">
-        <h6>Booking Details</h6>
-        <div class="addresses-cont mt-4">
-          <div class="grouped-input pickup-location-address">
-            <b-form-input
-              id="pickup-address"
-              class="inputField"
-              placeholder="Pickup Address"
-            ></b-form-input>
-          </div>
-          <div
-            class="grouped-input destination-location-address"
-            v-for="(x, xIndex) in destinationLocation"
-            :key="xIndex"
+          <h4 class="text-center">Ride Booking</h4>
+          <b-form-select
+            class="select-ride-type"
+            v-model="selectedRideType"
+            :options="['Imidiate Pickup', 'Schedule Pickup']"
+            @change="onOptionChanged"
           >
-            <b-form-input
-              id="destination-address"
-              class="inputField"
-              placeholder="Destination Address"
-            ></b-form-input>
-            <b-button
-              variant="light"
-              class="border-left add-another-destination-btn"
-              @click="addAnotherDestination"
-              v-if="xIndex == destinationLocation.length - 1"
-            >
-              <i class="fa fa-plus"></i>
-            </b-button>
-            <b-button
-              variant="light"
-              class="border-left add-another-destination-btn"
-              v-else
-              @click="deleteDestination(xindex)"
-            >
-              <i class="fa fa-times-circle"></i>
-            </b-button>
-          </div>
-        </div>
-        <div>
-          <b-button
-            variant="outline-dark"
-            size="md"
-            squared
-            block
-            class="mt-5"
-            @click="open"
-            >Profile fiscal</b-button
+            ></b-form-select
           >
         </div>
+        <SelectScheduleModal />
+        <div class="p-4 bg-white">
+          <h6>Booking Details</h6>
+          <div class="addresses-cont mt-4">
+            <div class="grouped-input pickup-location-address">
+              <b-form-input
+                id="pickup-address"
+                class="inputField"
+                placeholder="Pickup Address"
+              ></b-form-input>
+            </div>
+            <div
+              class="grouped-input destination-location-address"
+              v-for="(x, xIndex) in destinationLocation"
+              :key="xIndex"
+            >
+              <b-form-input
+                id="destination-address"
+                class="inputField"
+                placeholder="Destination Address"
+              ></b-form-input>
+              <b-button
+                variant="light"
+                class="border-left add-another-destination-btn"
+                @click="addAnotherDestination"
+                v-if="xIndex == destinationLocation.length - 1"
+              >
+                <i class="fa fa-plus"></i>
+              </b-button>
+              <b-button
+                variant="light"
+                class="border-left add-another-destination-btn"
+                v-else
+                @click="deleteDestination(xindex)"
+              >
+                <i class="fa fa-times-circle"></i>
+              </b-button>
+            </div>
+          </div>
+          <div>
+            <b-button
+              variant="outline-dark"
+              size="md"
+              squared
+              block
+              class="mt-5"
+              @click="bottonSheetOpen = true"
+              >Profile fiscal</b-button
+            >
+          </div>
+        </div>
+        <div
+          class="bottom-sheet-backdrop"
+          :class="[bottonSheetOpen ? 'opened' : 'closed']"
+          @click="bottonSheetOpen = false"
+        ></div>
+        <div
+          class="bottom-sheet"
+          :class="[bottonSheetOpen ? 'opened' : 'closed']"
+        >
+          <div class="bottom-sheet-content">
+            <header
+              class="
+                bottom-sheet-header
+                d-flex
+                justify-content-between
+                align-items-center
+                p-4
+              "
+            >
+              <h5 class="text-dark">Choose your cab</h5>
+              <b-button
+                class="close text-light"
+                size="sm"
+                variant="light"
+                @click="bottonSheetOpen = false"
+              >
+                <i class="fa fa-times"></i>
+              </b-button>
+            </header>
+            <main class="bottom-sheet-body">
+              <ChooseCab />
+            </main>
+            <footer class="px-4 chooseCabFooter">
+              <div
+                class="d-flex justify-content-between align-items-center mt-2"
+              >
+                <div class="d-flex align-items-lg-stretch">
+                  <i class="fa fa-money-bill"></i>
+                  <h5 class="ms-3">Cash Payment</h5>
+                </div>
+                <div>
+                  <i class="fa fa-chevron-right"></i>
+                </div>
+              </div>
+              <b-button block squared variant="dark" class="mt-4" @click="bottonSheetOpen = false"
+                >Confrim Trip</b-button
+              >
+            </footer>
+          </div>
+        </div>
       </div>
-
     </div>
   </div>
 </template>
 
 <script>
 import SelectScheduleModal from "../SelectScheduleModal.vue";
+import ChooseCab from "../ChooseCab.vue";
 export default {
-  components: { SelectScheduleModal },
+  components: { SelectScheduleModal, ChooseCab },
   data() {
     return {
       destinationLocation: [1, 1],
       selectedRideType: "Imidiate Pickup",
+      bottonSheetOpen: false,
     };
   },
   methods: {
@@ -120,7 +173,7 @@ export default {
   top: 30px;
   left: 30px;
   z-index: 999;
-  width: 500px;
+  width: 450px;
 }
 
 .grouped-input {
@@ -214,5 +267,54 @@ export default {
   border: 0 !important;
   box-shadow: none !important;
   outline: none !important;
+}
+
+/* bottom sheet  */
+.bottom-sheet-backdrop.opened {
+  height: 100%;
+  background: black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999993;
+  opacity: 0.5;
+  overflow: hidden;
+}
+
+.bottom-sheet {
+  overflow: hidden;
+  height: 0;
+  transition: 0s !important;
+}
+
+.bottom-sheet.opened {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  height: 80%;
+  width: 100%;
+  z-index: 9999999;
+  transition: 0.5s all !important;
+}
+
+.bottom-sheet-content {
+  height: 100%;
+  position: relative;
+}
+
+.chooseCabFooter {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: #fff;
+  box-shadow: -2px -4px 20px 0px #0000003b;
+  padding: 20px;
+}
+
+main.bottom-sheet-body {
+    overflow: auto;
+    height: calc(100vh - 470px);
 }
 </style>
