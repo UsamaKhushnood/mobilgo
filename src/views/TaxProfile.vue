@@ -117,9 +117,9 @@
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel
                   dicta possimus officia quaerat voluptatem eveniet dolore
                   corrupti repudiandae facere? Accusamus quidem blanditiis in
-                  fugiat non corporis nisi nemo vel qui. Accusamus quidem blanditiis in
-                  fugiat non corporis nisi nemo vel qui. Accusamus quidem blanditiis in
-                  fugiat non corporis nisi nemo vel qui.
+                  fugiat non corporis nisi nemo vel qui. Accusamus quidem
+                  blanditiis in fugiat non corporis nisi nemo vel qui. Accusamus
+                  quidem blanditiis in fugiat non corporis nisi nemo vel qui.
                 </h6>
               </li>
               <li class="m-3">
@@ -141,7 +141,7 @@
             </ol>
           </div>
           <div class="col-md-12 text-center mt-5">
-              <b-button class="bg-black " block squared>Envoyer</b-button>
+            <b-button class="bg-black" block squared>Envoyer</b-button>
           </div>
         </div>
       </form>
@@ -163,18 +163,17 @@ export default {
 };
 </script>
 <style scoped>
-
 ::marker {
-    color: #000;
-    font-weight: 900;
+  color: #000;
+  font-weight: 900;
 }
 
 ol {
-    padding: 0;
+  padding: 0;
 }
 
 li {
-    list-style: unset !important;
+  list-style: unset !important;
 }
 .form-page {
   padding: 60px 120px;

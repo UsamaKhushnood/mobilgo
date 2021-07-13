@@ -4,7 +4,7 @@
       <div>
         <h3 class="text-center">Commandez Une Courses</h3>
         <div class="sidebar-nav-links">
-          <router-link to="/" exact class="sidebar-link">
+          <router-link to="/mes-coruses" class="sidebar-link">
             <div class="link-icon">
               <i class="fas fa-history"></i>
             </div>

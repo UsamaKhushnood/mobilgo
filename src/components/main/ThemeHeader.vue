@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-navbar class="bg-black">
-      <div class="container-fluid">
+      <div class="container-fluid" style="padding: 0 42px;">
         <b-navbar-brand href="/">
           <div class="site-logo text-center">
             <svg
@@ -67,9 +67,10 @@
 
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
-          <b-button squared variant="outline-light" class="px-4 me-4 my-2"
+          <b-button squared variant="outline-light" class="px-4 me-4 my-2" v-b-modal.aideModal
             >Aide</b-button
           >
+          <AideModal />
           <b-nav-item-dropdown
             size="xs"
             left
@@ -89,7 +90,7 @@
               >Commandez Une Courses</b-dropdown-item
             >
             <b-dropdown-divider></b-dropdown-divider>
-            <router-link to="/" exact class="sidebar-link">
+            <router-link to="/mes-coruses" class="sidebar-link">
               <div class="link-icon">
                 <i class="fas fa-history"></i>
               </div>
@@ -129,7 +130,12 @@
 </template>
 
 <script>
-export default {};
+import AideModal from '../AideModal.vue'
+export default {
+  components: {
+    AideModal
+  }
+};
 </script>
 
 <style>
