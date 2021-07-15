@@ -69,19 +69,19 @@
               squared
               block
               class="mt-5"
-              @click="bottonSheetOpen = true"
+              @click="bottomSheetOpen = true"
               >Profile fiscal</b-button
             >
           </div>
         </div>
         <div
           class="bottom-sheet-backdrop"
-          :class="[bottonSheetOpen ? 'opened' : 'closed']"
-          @click="bottonSheetOpen = false"
+          :class="[bottomSheetOpen ? 'opened' : 'closed']"
+          @click="bottomSheetOpen = false"
         ></div>
         <div
           class="bottom-sheet"
-          :class="[bottonSheetOpen ? 'opened' : 'closed']"
+          :class="[bottomSheetOpen ? 'opened' : 'closed']"
         >
           <div class="bottom-sheet-content">
             <header
@@ -98,7 +98,7 @@
                 class="close text-light"
                 size="sm"
                 variant="light"
-                @click="bottonSheetOpen = false"
+                @click="bottomSheetOpen = false"
               >
                 <i class="fa fa-times"></i>
               </b-button>
@@ -108,17 +108,61 @@
             </main>
             <footer class="px-4 chooseCabFooter">
               <div
-                class="d-flex justify-content-between align-items-center mt-2"
+                class="d-flex justify-content-between align-items-center mt-2 clickable-item"
+                @click="bottomSheetOpen2 = true"
               >
                 <div class="d-flex align-items-lg-stretch">
                   <i class="fa fa-money-bill"></i>
                   <h5 class="ms-3">Cash Payment</h5>
                 </div>
-                <div>
+                <div >
                   <i class="fa fa-chevron-right"></i>
                 </div>
               </div>
-              <b-button block squared variant="dark" class="mt-4" @click="bottonSheetOpen = false"
+              <b-button block squared variant="dark" class="mt-4" @click="bottomSheetOpen = false"
+                >Confrim Trip</b-button
+              >
+            </footer>
+          </div>
+        </div>
+        <div
+          class="bottom-sheet-backdrop"
+          :class="[bottomSheetOpen2 ? 'opened' : 'closed']"
+          @click="bottomSheetOpen2 = false"
+        ></div>
+        <div
+          class="bottom-sheet"
+          :class="[bottomSheetOpen2 ? 'opened' : 'closed']"
+        >
+          <div class="bottom-sheet-content">
+            <header
+              class="
+                bottom-sheet-header
+                d-flex
+                justify-content-between
+                align-items-center
+                p-4
+              "
+            >
+              <h5 class="text-dark">Payment Method</h5>
+              <b-button
+                class="close text-light"
+                size="sm"
+                variant="light"
+                @click="bottomSheetOpen2 = false"
+              >
+                <i class="fa fa-times"></i>
+              </b-button>
+            </header>
+            <main class="bottom-sheet-body">
+              <PaymentMethod />
+            </main>
+            <footer class="px-4 chooseCabFooter">
+
+              <b-button block squared variant="outline-dark"  class="mt-4" v-b-modal.addNewCard
+                >Add Card</b-button
+              >
+              <b-button block squared variant="dark" class="mt-2" @click="bottomSheetOpen2 = false"
                 >Confrim Trip</b-button
               >
             </footer>
@@ -132,13 +176,15 @@
 <script>
 import SelectScheduleModal from "../SelectScheduleModal.vue";
 import ChooseCab from "../ChooseCab.vue";
+import PaymentMethod from "../PaymentMethod.vue";
 export default {
-  components: { SelectScheduleModal, ChooseCab },
+  components: { SelectScheduleModal, ChooseCab, PaymentMethod },
   data() {
     return {
       destinationLocation: [1, 1],
       selectedRideType: "Imidiate Pickup",
-      bottonSheetOpen: false,
+      bottomSheetOpen: false,
+      bottomSheetOpen2: false,
     };
   },
   methods: {
@@ -317,4 +363,15 @@ main.bottom-sheet-body {
     overflow: auto;
     height: calc(100vh - 470px);
 }
+
+.clickable-item {
+  cursor: pointer;
+  padding: 10px 10px;
+}
+
+.clickable-item:hover {
+  background-color: #f1f1f1;
+}
+
+
 </style>
