@@ -11,12 +11,12 @@
       </div>
       <div class="col-md-6 cab-info">
         <div class="d-flex align-items-center">
-          <h6 class="cab-name">Go Cab</h6>
+          <h6 class="cab-name">{{cab.cab}}</h6>
           <h6 class="text-danger passenger-limit ms-2">1-5</h6>
           <i class="fa fa-users ms-2 text-danger"></i>
         </div>
         <div>
-          <p class="text-secondary cab-description">Lorem ipsum dolor sit</p>
+          <p class="text-secondary cab-description">{{cab.desc}}</p>
         </div>
       </div>
       <div class="col-md-3 cab-price">
@@ -32,12 +32,9 @@ export default {
   data() {
     return {
       availableCabs: [
-        { active: "inactive" },
-        { active: "active" },
-        { active: "inactive" },
-        { active: "inactive" },
-        { active: "inactive" },
-        { active: "inactive" },
+        {cab: 'GoCab', desc: 'Berline ou VAN éléctrique',  active: "inactive" },
+        {cab: 'GoWomen ', desc: 'Berline électrique conduit uniquement par des femmes',  active: "active" },
+        {cab: 'GoShare ', desc: 'Berline électrique conduit uniquement par des femmes',  active: "inactive" },
       ],
     };
   },

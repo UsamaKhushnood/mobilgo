@@ -1,10 +1,9 @@
 <template>
   <div class="bg-white form-page self-scroll">
     <div class="tax-form">
-      <h3>Infromation de societe</h3>
+      <h3>Informations de société</h3>
       <h6 class="text-secondary mt-2">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
-        harum eveniet <br />vero ut quasi, placeat doloremque hic soluta?
+        Ajoutez ici les informations personnelles que vous souhaitez voir apparaitre sur les reçus émis à votre attention.
       </h6>
       <form class="mt-2">
         <div class="row">
@@ -21,21 +20,21 @@
                 v-model="name"
                 :state="nameState"
                 aria-describedby="input-live-help input-live-feedback"
-                placeholder="Enter your name"
+                placeholder="Entrez nom titulaire du compte"
                 trim
               ></b-form-input>
             </div>
           </div>
           <div class="col-md-6 mt-4">
             <label class="mb-2" for="input-live"
-              ><h6>Addresse (rue)<span class="text-danger">*</span></h6>
+              ><h6>Adresse (rue)<span class="text-danger">*</span></h6>
             </label>
             <b-form-input
               id="input-live"
               v-model="name"
               :state="nameState"
               aria-describedby="input-live-help input-live-feedback"
-              placeholder="Enter your name"
+              placeholder="Entrez adresse titulaire du compte"
               trim
             ></b-form-input>
           </div>
@@ -49,7 +48,7 @@
                 v-model="name"
                 :state="nameState"
                 aria-describedby="input-live-help input-live-feedback"
-                placeholder="Enter your name"
+                placeholder="Entrez votre ville	"
                 trim
               ></b-form-input>
             </div>
@@ -61,28 +60,29 @@
               v-model="name"
               :state="nameState"
               aria-describedby="input-live-help input-live-feedback"
-              placeholder="Enter your name"
+              placeholder="Entrez votre pays"
               trim
             ></b-form-input>
           </div>
           <div class="col-md-12 mt-4">
             <label class="mb-2" for="input-live"
-              ><h6>Code Postal (format de sailsie: 5 chiffres, p. ex. 9999)</h6>
+              ><h6>Code Postal (format de saisie à 5 chiffres p. ex. 99999)</h6>
             </label>
             <b-form-input
               id="input-live"
               v-model="name"
               :state="nameState"
               aria-describedby="input-live-help input-live-feedback"
-              placeholder="Enter your name"
+              placeholder="Entrez votre code postal"
               trim
             ></b-form-input>
           </div>
           <div class="col-md-12 mt-4">
             <label class="mb-2" for="input-live"
               ><h6>
-                Numero de TVA (format de sailsie: 5 chiffres, p. ex. 9999 format
-                de sailsie: 5 chiffres, p. ex. 9999 format de sailsie
+                Numéro de TVA (format de saisie : « FR » suivi de 2 lettres
+                majuscules ou chiffres et de 9 chiffres, p. ex. FR999999999 ou
+                FRAA9999999)
               </h6>
             </label>
             <b-input-group prepend="FR">
@@ -91,7 +91,7 @@
                 v-model="name"
                 :state="nameState"
                 aria-describedby="input-live-help input-live-feedback"
-                placeholder="Enter your name"
+                placeholder="Entrez numéro de TVA"
                 trim
               ></b-form-input>
             </b-input-group>
@@ -114,28 +114,32 @@
             <ol>
               <li class="m-3">
                 <h6 class="text-secondary">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel
-                  dicta possimus officia quaerat voluptatem eveniet dolore
-                  corrupti repudiandae facere? Accusamus quidem blanditiis in
-                  fugiat non corporis nisi nemo vel qui. Accusamus quidem
-                  blanditiis in fugiat non corporis nisi nemo vel qui. Accusamus
-                  quidem blanditiis in fugiat non corporis nisi nemo vel qui.
+                  En cliquant sur « <a href="#" style="font-weigth: 900">Enregistrer </a> », vous demandez à MobilGo Ltd
+                  et/ou ses sociétés affiliées (« MobilGo ») d’ajouter les
+                  informations que vous lui fournissez à la facture directement
+                  émise par MobilGo, ou au nom de tiers (uniquement si cela est
+                  requis par la législation en vigueur).
                 </h6>
               </li>
               <li class="m-3">
                 <h6 class="text-secondary">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel
-                  dicta possimus officia quaerat voluptatem eveniet dolore
-                  corrupti repudiandae facere? Accusamus quidem blanditiis in
-                  fugiat non corporis nisi nemo vel qui.
+                  J’atteste que les informations que j’ai fournies sont exactes
+                  et j’accepte que MobilGo décline toute responsabilité en cas
+                  d’inexactitude de ces informations.
                 </h6>
               </li>
               <li class="m-3">
                 <h6 class="text-secondary">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel
-                  dicta possimus officia quaerat voluptatem eveniet dolore
-                  corrupti repudiandae facere? Accusamus quidem blanditiis in
-                  fugiat non corporis nisi nemo vel qui.
+                  Lorsque la législation en vigueur exige des factures conformes
+                  aux lois locales, vos informations peuvent également être
+                  communiquées à des prestataires de service tiers dans ce but.
+                </h6>
+              </li>
+              <li class="m-3">
+                <h6 class="text-secondary">
+                  Pour en savoir plus sur le responsable du traitement des
+                  données et sur vos droits, consultez notre <a href="#" style="font-weigth: 900">Politique de
+                  confidentialité</a>.
                 </h6>
               </li>
             </ol>

@@ -43,7 +43,7 @@
             <div class="link-icon">
               <i class="fas fa-power-off"></i>
             </div>
-            Logout</router-link
+            Se déconnecter</router-link
           >
         </div>
       </div>

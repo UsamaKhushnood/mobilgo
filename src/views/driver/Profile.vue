@@ -45,16 +45,53 @@
 
         <div class="col-md-12 g-input">
           <label for="location" class="label-within-input">Langue</label>
-          <b-form-select
+          <b-form-Langue
             class="main-input"
             :options="['options', 'options', 'options', 'options']"
-            >Please select an option</b-form-select
+            >Please select an option</b-form-Langue
+          >
+        </div>
+        <div class="col-md-12 g-input">
+          <label for="location" class="label-within-input">Adresse</label>
+          <b-form-input
+            class="main-input"
+            type="text"
+            id="inviteLink"
+            value="dummy@email.com"
+          ></b-form-input>
+          <b-button class="copyBtn btn-within-input" variant="light"
+            >Edit</b-button
+          >
+        </div>
+        <div class="col-md-12 g-input">
+          <label for="location" class="label-within-input">Date de naissance</label>
+          <b-form-input
+            class="main-input"
+            type="text"
+            id="inviteLink"
+            value="dummy@email.com"
+          ></b-form-input>
+          <b-button class="copyBtn btn-within-input" variant="light"
+            >Edit</b-button
+          >
+        </div>
+        <div class="col-md-12 g-input">
+          <label for="location" class="label-within-input">Ganre</label>
+          <b-form-input
+            class="main-input"
+            type="text"
+            id="inviteLink"
+            value="dummy@email.com"
+          ></b-form-input>
+          <b-button class="copyBtn btn-within-input" variant="light"
+            >Edit</b-button
           >
         </div>
 
         <div class="col-md-12 g-input">
           <label for="location" class="label-within-input"
-            >Code d’invitation</label>
+            >Code d’invitation</label
+          >
           <b-form-input
             class="main-input"
             type="text"
@@ -65,42 +102,16 @@
             >Copy</b-button
           >
         </div>
-        <h4 class="mb-2s">Informations personnelles</h4>
-           <div class="col-md-12 g-input">
-          <label for="location" class="label-within-input">Adresse</label>
+        <div class="col-md-12 g-input">
+          <label for="location" class="label-within-input"
+            >Préférences et Habitudes</label
+          >
           <b-form-input
             class="main-input"
             type="text"
             id="inviteLink"
-            value="dummy"
+            value="https://dummy.com/KDFl"
           ></b-form-input>
-          <b-button class="copyBtn btn-within-input" variant="light"
-            >Edit</b-button
-          >
-        </div>
-            <div class="col-md-12 g-input">
-          <label for="location" class="label-within-input">Date de naissance</label>
-          <b-form-input
-            class="main-input"
-            type="text"
-            id="inviteLink"
-            value="dummy"
-          ></b-form-input>
-          <b-button class="copyBtn btn-within-input" variant="light"
-            >Edit</b-button
-          >
-        </div>
-            <div class="col-md-12 g-input">
-          <label for="location" class="label-within-input">Genre</label>
-          <b-form-input
-            class="main-input"
-            type="text"
-            id="inviteLink"
-            value="Male"
-          ></b-form-input>
-          <b-button class="copyBtn btn-within-input" variant="light"
-            >Edit</b-button
-          >
         </div>
         <div class="col-md-12 mt-5 text-center">
           <b-button class="bg-black w-50" squared>Enregistrer les modifications</b-button>
@@ -164,8 +175,8 @@ label.label-within-input {
   color: var(--bs-secondary) !important;
 }
 
-.profile-body .main-input:focus{
-    box-shadow: none !important;
-    background: #f1f1f1 !important;
+.profile-body .main-input:focus {
+  box-shadow: none !important;
+  background: #f1f1f1 !important;
 }
 </style>

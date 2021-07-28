@@ -32,7 +32,7 @@
             <div class="link-icon">
               <i class="fas fa-file-word"></i>
             </div>
-            Profile Fiscal
+            Profil Fiscal
           </router-link>
           <router-link
             to="#dsad"
@@ -42,7 +42,7 @@
             <div class="link-icon">
               <i class="fas fa-power-off"></i>
             </div>
-            Logout</router-link
+            Se déconnecter</router-link
           >
         </div>
       </div>

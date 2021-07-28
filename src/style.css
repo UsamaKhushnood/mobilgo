@@ -111,3 +111,10 @@ button.close.text-light {
   justify-content: center;
   font-weight: 900;
 }
+
+
+.logoImg{
+  background: #fff;
+  width: 190px;
+  padding: 20px 50px;
+}

@@ -51,10 +51,46 @@
             >Please select an option</b-form-Langue
           >
         </div>
+        <div class="col-md-12 g-input">
+          <label for="location" class="label-within-input">Adresse</label>
+          <b-form-input
+            class="main-input"
+            type="text"
+            id="inviteLink"
+            value="dummy@email.com"
+          ></b-form-input>
+          <b-button class="copyBtn btn-within-input" variant="light"
+            >Edit</b-button
+          >
+        </div>
+        <div class="col-md-12 g-input">
+          <label for="location" class="label-within-input">Date de naissance</label>
+          <b-form-input
+            class="main-input"
+            type="text"
+            id="inviteLink"
+            value="dummy@email.com"
+          ></b-form-input>
+          <b-button class="copyBtn btn-within-input" variant="light"
+            >Edit</b-button
+          >
+        </div>
+        <div class="col-md-12 g-input">
+          <label for="location" class="label-within-input">Ganre</label>
+          <b-form-input
+            class="main-input"
+            type="text"
+            id="inviteLink"
+            value="dummy@email.com"
+          ></b-form-input>
+          <b-button class="copyBtn btn-within-input" variant="light"
+            >Edit</b-button
+          >
+        </div>
 
         <div class="col-md-12 g-input">
           <label for="location" class="label-within-input"
-            >Invitation Code</label
+            >Code d’invitation</label
           >
           <b-form-input
             class="main-input"
@@ -68,7 +104,7 @@
         </div>
         <div class="col-md-12 g-input">
           <label for="location" class="label-within-input"
-            >Prefrences and Habbits</label
+            >Préférences et Habitudes</label
           >
           <b-form-input
             class="main-input"
@@ -78,7 +114,7 @@
           ></b-form-input>
         </div>
         <div class="col-md-12 mt-5 text-center">
-          <b-button class="bg-black w-50" squared>Save Chanes</b-button>
+          <b-button class="bg-black w-50" squared>Enregistrer les modifications</b-button>
         </div>
       </div>
     </div>
@@ -139,8 +175,8 @@ label.label-within-input {
   color: var(--bs-secondary) !important;
 }
 
-.profile-body .main-input:focus{
-    box-shadow: none !important;
-    background: #f1f1f1 !important;
+.profile-body .main-input:focus {
+  box-shadow: none !important;
+  background: #f1f1f1 !important;
 }
 </style>

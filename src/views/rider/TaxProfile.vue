@@ -1,10 +1,9 @@
 <template>
   <div class="bg-white form-page self-scroll">
     <div class="tax-form">
-      <h3>Infromation de societe</h3>
+      <h3>Informations de société</h3>
       <h6 class="text-secondary mt-2">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
-        harum eveniet <br />vero ut quasi, placeat doloremque hic soluta?
+        Ajoutez ici les informations personnelles que vous souhaitez voir apparaitre sur les reçus émis à votre attention.
       </h6>
       <form class="mt-2">
         <div class="row">
@@ -115,7 +114,7 @@
             <ol>
               <li class="m-3">
                 <h6 class="text-secondary">
-                  En cliquant sur « Enregistrer », vous demandez à MobilGo Ltd
+                  En cliquant sur « <a href="#" style="font-weigth: 900">Enregistrer </a> », vous demandez à MobilGo Ltd
                   et/ou ses sociétés affiliées (« MobilGo ») d’ajouter les
                   informations que vous lui fournissez à la facture directement
                   émise par MobilGo, ou au nom de tiers (uniquement si cela est
@@ -139,8 +138,8 @@
               <li class="m-3">
                 <h6 class="text-secondary">
                   Pour en savoir plus sur le responsable du traitement des
-                  données et sur vos droits, consultez notre Politique de
-                  confidentialité.
+                  données et sur vos droits, consultez notre <a href="#" style="font-weigth: 900">Politique de
+                  confidentialité</a>.
                 </h6>
               </li>
             </ol>

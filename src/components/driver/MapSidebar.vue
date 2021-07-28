@@ -70,7 +70,7 @@
               block
               class="mt-5"
               @click="bottomSheetOpen = true"
-              >Profile fiscal</b-button
+              >Profil Fiscal</b-button
             >
           </div>
         </div>
@@ -93,7 +93,7 @@
                 p-4
               "
             >
-              <h5 class="text-dark">Choose your cab</h5>
+              <h5 class="text-dark">Choisir votre véhicule</h5>
               <b-button
                 class="close text-light"
                 size="sm"
@@ -113,14 +113,14 @@
               >
                 <div class="d-flex align-items-lg-stretch">
                   <i class="fa fa-money-bill"></i>
-                  <h5 class="ms-3">Cash Payment</h5>
+                  <h5 class="ms-3">Moyen de paiement</h5>
                 </div>
                 <div >
                   <i class="fa fa-chevron-right"></i>
                 </div>
               </div>
               <b-button block squared variant="dark" class="mt-4" @click="bottomSheetOpen = false"
-                >Confrim Trip</b-button
+                >Confirmer la course </b-button
               >
             </footer>
           </div>

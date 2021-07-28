@@ -13,14 +13,14 @@
         <div class="col-md-12 mt-4">
           <b-form-textarea
             id="textarea-message"
-            placeholder="Your Message"
+            placeholder="Votre message"
             rows="8"
           ></b-form-textarea>
         </div>
 
         <div class="col-md-12 mt-4">
           <b-button variant="dark" squared block @click="closeModal()"
-            >Send Request</b-button
+            >Envoyer ma demande</b-button
           >
         </div>
       </b-form>

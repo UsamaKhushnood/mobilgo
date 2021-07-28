@@ -104,8 +104,10 @@
                   virements. En soumettant un compte bancaire, j’autorise
                   MobilGo à réaliser des virements vers ce compte bancaire via
                   le système de virement SEPA (Single Euro Payment Area), et je
-                  confirme avoir lu et accepte les Conditions d’utilisation du
-                  service <a href="/driver">MobilGo</a>.
+                  confirme avoir lu et accepte les
+                  <a href="/driver" style="font-weight: 700">
+                    Conditions d’utilisation du service MobilGo</a
+                  >.
                 </h6>
               </li>
             </ol>

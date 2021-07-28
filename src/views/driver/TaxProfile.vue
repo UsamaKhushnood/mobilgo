@@ -1,10 +1,9 @@
 <template>
   <div class="bg-white form-page self-scroll">
     <div class="tax-form">
-      <h3>Information de société</h3>
+      <h3>Informations de société</h3>
       <h6 class="text-secondary mt-2">
-        Ajoutez ici les informations personnelles que vous souhaitez voir
-        apparaitre sur les reçus émis à votre attention.
+        Ajoutez ici les informations personnelles que vous souhaitez voir apparaitre sur les reçus émis à votre attention.
       </h6>
       <form class="mt-2">
         <div class="row">
@@ -12,7 +11,7 @@
             <div role="group">
               <label class="mb-2" for="input-live"
                 ><h6>
-                  Nom (patronymique ou de l’entreprise)
+                  Nom (patronique ou de I'entreprise)
                   <span class="text-danger">*</span>
                 </h6>
               </label>
@@ -21,7 +20,7 @@
                 v-model="name"
                 :state="nameState"
                 aria-describedby="input-live-help input-live-feedback"
-                placeholder="Entrez votre nom"
+                placeholder="Entrez nom titulaire du compte"
                 trim
               ></b-form-input>
             </div>
@@ -35,7 +34,7 @@
               v-model="name"
               :state="nameState"
               aria-describedby="input-live-help input-live-feedback"
-              placeholder="Entrez votre adresse"
+              placeholder="Entrez adresse titulaire du compte"
               trim
             ></b-form-input>
           </div>
@@ -49,7 +48,7 @@
                 v-model="name"
                 :state="nameState"
                 aria-describedby="input-live-help input-live-feedback"
-                placeholder="Entrez votre ville"
+                placeholder="Entrez votre ville	"
                 trim
               ></b-form-input>
             </div>
@@ -115,11 +114,11 @@
             <ol>
               <li class="m-3">
                 <h6 class="text-secondary">
-                  En cliquant sur « Enregistrer », vous demandez à MobilGo Ltd
+                  En cliquant sur « <a href="#" style="font-weigth: 900">Enregistrer </a> », vous demandez à MobilGo Ltd
                   et/ou ses sociétés affiliées (« MobilGo ») d’ajouter les
                   informations que vous lui fournissez à la facture directement
                   émise par MobilGo, ou au nom de tiers (uniquement si cela est
-                  requis par la législation en vigueur) .
+                  requis par la législation en vigueur).
                 </h6>
               </li>
               <li class="m-3">
@@ -139,8 +138,8 @@
               <li class="m-3">
                 <h6 class="text-secondary">
                   Pour en savoir plus sur le responsable du traitement des
-                  données et sur vos droits, consultez notre Politique de
-                  confidentialité.
+                  données et sur vos droits, consultez notre <a href="#" style="font-weigth: 900">Politique de
+                  confidentialité</a>.
                 </h6>
               </li>
             </ol>
