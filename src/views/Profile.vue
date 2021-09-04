@@ -76,7 +76,7 @@
           >
         </div>
         <div class="col-md-12 g-input">
-          <label for="location" class="label-within-input">Ganre</label>
+          <label for="location" class="label-within-input">Genre</label>
           <b-form-input
             class="main-input"
             type="text"

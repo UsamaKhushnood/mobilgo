@@ -142,7 +142,7 @@
             <p class="mt-3 text-secondary">
               Réservez une course MobilGo depuis votre navigateur Web sans aucune application à installer.
             </p>
-            <b-button variant="dark" squared>Commandez une course</b-button>
+            <b-button variant="dark" squared class="mt-4">Commandez une course</b-button>
           </div>
         </div>
       </div>

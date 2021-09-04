@@ -31,7 +31,7 @@
               <strong>Dale Bradely</strong>
             </template>
             <b-dropdown-item href="#" disabled class="align-item-center"
-              >Préparez-vous à conduire </b-dropdown-item
+              >Commandez une course </b-dropdown-item
             >
             <b-dropdown-divider></b-dropdown-divider>
             <router-link to="/mes-coruses" class="sidebar-link">

@@ -142,7 +142,7 @@
             <p class="mt-3 text-secondary">
               Trouvez une course MobilGo depuis votre application à installer sur votre smartphone.
             </p>
-            <b-button variant="dark" squared>Se connecter à l’App</b-button>
+            <b-button variant="dark" squared class="mt-4">Se connecter à l’App</b-button>
           </div>
         </div>
       </div>
